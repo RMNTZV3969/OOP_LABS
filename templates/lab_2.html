@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задача №2</title>
+</head>
+<body>
+{% if data.power[0] > data.power[1] %}
+    Победитель - {{ data.names[0] }}
+{% elif data.power[0] < data.power[1] %}
+    Победитель - {{ data.names[1] }}
+{% else %}
+    Ничья
+{% endif %}
+</body>
+</html>

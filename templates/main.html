@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Задача №3</title>
+</head>
+<body>
+
+<table>
+    <caption>Cities</caption>
+    <tr>
+        <th>Индекс</th>
+        <th>Тип региона</th>
+        <th>Регион</th>
+        <th>Город</th>
+        <th>Население</th>
+    </tr>
+    {% for city in cities -%}
+        {% if city.people | int >= num %}
+            <tr>
+                <td>{{ city.index }}</td>
+                <td>{{ city.type_region }}</td>
+                <td>{{ city.region }}</td>
+                <td>{{ city.city }}</td>
+                <td>{{ city.people }}</td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+</table>
+
+</body>
+</html>
